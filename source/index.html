@@ -142,10 +142,14 @@
       <h2 class="contacts__title">
         Контакты
       </h2>
-      <h3 class="contacts__mail mail">e-mail:</h3>
-      <a class="mail__text" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-      <h3 class="contacts__address address">адрес:</h3>
-      <p class="address__text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
+      <div class="contacts-mail">
+        <h3 class="contacts-mail__title">e-mail:</h3>
+        <a class="contacts-mail__text" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+      </div>
+      <div class="contacts-address">
+        <h3 class="contacts-address__title">адрес:</h3>
+        <p class="contacts-address__text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
+      </div>
       <button class="contacts__button button" type="button">Напишите нам</button>
     </section>
   </main>
@@ -179,7 +183,7 @@
   <!-- Модальное окно -->
   <div class="modal-containe">
     <h2 class="modal-containe__title">Добавить в корзину</h2>
-    <p class="modal-containe_text">Выберите размер:</p>
+    <p class="modal-containe__text">Выберите размер:</p>
     <form class="modal-size" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="filter-size">
         <ul class="filter-size__list">
@@ -194,7 +198,7 @@
           </li>
         </ul>
       </fieldset>
-      <button class="week-product__button button" type="submit">Добавить</button>
+      <button class="modal-containe__button button" type="submit">Добавить</button>
     </form>
   </div>
 
