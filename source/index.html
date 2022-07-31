@@ -8,7 +8,7 @@
 
 <body>
   <header>
-    <img src="img/mishka-logo-header.svg.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
+    <img src="img/mishka-logo-header.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
 
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -88,7 +88,7 @@
           15 см
         </dd>
       </dl>
-      <img src="img/week-product.jpg" width="260" height="315" alt="Вязаные корзинки.">
+      <img src="img/week-product.jpg" width="260" height="315" alt="Три милые вязяные карзинки разного размера.">
       <b class="week-product__price">Цена: 990 руб.</b>
       <button class="week-product__button button" type="button">Заказать</button>
     </section>
@@ -97,7 +97,7 @@
       <h2 class="about-company__title">
         Коротко о нас:
       </h2>
-      <ul class="about-company__list">ы
+      <ul class="about-company__list">
         <li class="about-company__item">Экологически<br>
           чистые материалы
         </li>
@@ -133,6 +133,24 @@
         <cite class="reviews__author-name">Анастасия Красильникова</cite>
         <cite class="reviews__author-id">@misssssiskras</cite>
       </blockquote>
+      <blockquote class="reviews__item">
+        <p class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества
+          лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
+          и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+          больше лайков!
+        </p>
+        <cite class="reviews__author-name">Екатерина Красильникова</cite>
+        <cite class="reviews__author-id">@misssssiskras2</cite>
+      </blockquote>
+      <blockquote class="reviews__item">
+        <p class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого
+          количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
+          и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+          больше лайков!
+        </p>
+        <cite class="reviews__author-name">Елена Красильникова</cite>
+        <cite class="reviews__author-id">@misssssiskras3</cite>
+      </blockquote>
       <button class="reviews__prev" type="button">Предыдущий отзыв</button>
       <button class="reviews__next" type="button">Следующий отзыв</button>
       <button class="reviews__button button" type="button">Написать</button>
@@ -148,14 +166,16 @@
       </div>
       <div class="contacts-address">
         <h3 class="contacts-address__title">адрес:</h3>
-        <p class="contacts-address__text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</p>
+        <address class="contacts-address__text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</address>
       </div>
+      <img src="img/contacts-map.jpg" width="320" height="454" alt="Расположение магазина на карте.">
       <button class="contacts__button button" type="button">Напишите нам</button>
     </section>
   </main>
+
   <footer class="main-footer">
     <!-- Блок 5 социальные сети -->
-    <div class="main-footer__social social">
+    <div class="social">
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
@@ -181,11 +201,11 @@
     </div>
   </footer>
   <!-- Модальное окно -->
-  <div class="modal-containe">
+  <!-- <div class="modal-containe">
     <h2 class="modal-containe__title">Добавить в корзину</h2>
-    <p class="modal-containe__text">Выберите размер:</p>
     <form class="modal-size" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="filter-size">
+        <legend class="filter-color__legend">Выберите размер:</legend>
         <ul class="filter-size__list">
           <li class="filter-size__item">
             <input class="visually-hidden filter-size__input" type="radio" name="filter-size" value="S" checked>
@@ -200,7 +220,7 @@
       </fieldset>
       <button class="modal-containe__button button" type="submit">Добавить</button>
     </form>
-  </div>
+  </div> -->
 
 </body>
 
