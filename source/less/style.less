@@ -1,1 +1,71 @@
 // Начните писать стили здесь
+
+@import "./header.less";
+@import "./catalog-nav.less";
+@import "./week-products.less";
+@import "./about-company.less";
+@import "./reviews.less";
+@import "./contacts.less";
+@import "./footer.less";
+@import "./form.less";
+@import "./main-catalog.less";
+
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/opensans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/opensansbold.woff2") format("woff2");
+  font-display: swap;
+}
+
+// Общие стили и переменные
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
+  height: 100%;
+}
+
+// заголовки
+
+.page-title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+// кнопка
+
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #444444;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  border: 2px solid #444444;
+  cursor: pointer;
+  background-color: #ffffff;
+}
