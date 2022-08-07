@@ -27,7 +27,25 @@
   font-display: swap;
 }
 
+// Адаптивные размеры
+
+@mobile-width: 320px;
+@tablet-width: 768px;
+@desktop-width: 1048px;
+@mobile-width-only: 767px;
+
 // Общие стили и переменные
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
