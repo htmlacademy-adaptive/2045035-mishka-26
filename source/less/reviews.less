@@ -16,6 +16,15 @@
     margin: 0 auto;
     margin-bottom: 83px;
     padding: 82px 0 47px 50px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    margin: 0 auto;
+    padding: 82px 0 47px 174px;
+    box-sizing: border-box;
+    margin-bottom: 60px;
   }
 }
 
@@ -23,6 +32,16 @@
   .section-title;
   margin-bottom: 14px;
   grid-area: one;
+
+  @media (min-width: @tablet-width) {
+    .section-title-table;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .section-title-desctop;
+    margin-bottom: 35px;
+  }
 }
 
 .reviews__button {
