@@ -10,12 +10,16 @@
 
 <body>
   <header>
-    <a class="header-logo" href="index.html">
-      <img src="img/mishka-logo-header.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
-    </a>
-
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="header__logo__cover">
+        <a class="header__logo--mobile" href="index.html">
+          <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
+        </a>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
+      <a class="header__logo--tablet" href="index.html">
+        <img src="img/mishka-logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы «Мишка».">
+      </a>
       <!-- Раскрывающаяся навигация -->
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
@@ -28,17 +32,35 @@
             Вязание на заказ
           </a>
         </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">
+      </ul>
+      <a class="header__logo--desktop" href="index.html">
+        <img src="img/mishka-logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы «Мишка».">
+      </a>
+      <ul class="main-nav__list user-list">
+        <li class="user-list__item">
+          <a class="user-list__link" href="#">
             Поиск по сайту
           </a>
         </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">
+        <li class="user-list__item">
+          <a class="user-list__link" href="#">
             Корзина: пока пуста
           </a>
         </li>
       </ul>
+      <ul class="main-nav__list promo-list">
+        <li class="promo-list__item">
+          <a class="promo-list__link" href="#">
+            Новые поступления
+          </a>
+        </li>
+        <li class="promo-list__item">
+          <a class="promo-list__link" href="#">
+            Распродажа
+          </a>
+        </li>
+      </ul>
+      <p class="main-nav__text">Бесплатная доставка по России</p>
     </nav>
   </header>
 
