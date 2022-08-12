@@ -11,13 +11,13 @@
 <body>
   <header>
     <nav class="main-nav">
-      <div class="header__logo__cover">
-        <a class="header__logo--mobile" href="index.html">
+      <div class="main-nav__cover-logo">
+        <a class="main-nav__logo--mobile" href="index.html">
           <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
-      <a class="header__logo--tablet" href="index.html">
+      <a class="main-nav__logo--tablet" href="index.html">
         <img src="img/mishka-logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы «Мишка».">
       </a>
       <!-- Раскрывающаяся навигация -->
@@ -33,7 +33,7 @@
           </a>
         </li>
       </ul>
-      <a class="header__logo--desktop" href="index.html">
+      <a class="main-nav__logo--desktop" href="index.html">
         <img src="img/mishka-logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы «Мишка».">
       </a>
       <ul class="main-nav__list user-list">
@@ -74,9 +74,7 @@
     <form class="main-form__filter" action="https://echo.htmlacademy.ru/" method="get">
       <!-- Тип -->
       <fieldset class="filter-type form-fieldset">
-        <div class="filter-type__legend-cover">
-          <legend class="filter-type__legend form-legend">Тип</legend>
-        </div>
+        <h2 class="filter-type__legend form-legend">Тип</h2>
         <ul class="filter-type__list">
           <li class="filter-type__item">
             <label>
@@ -93,54 +91,52 @@
         </ul>
       </fieldset>
       <!-- Цвет -->
-      <fieldset class="filter-color form-fieldset">
-        <div class="filter-color__legend-cover">
-          <legend class="filter-color__legend form-legend">Цвет</legend>
-        </div>
-        <ul class="filter-color__list">
-          <li class="filter-color__item">
-            <label>
-              <input class="filter-color__input" type="checkbox" name="white" checked>
-              <span class="control-label">Белый</span>
-            </label>
-          </li>
-          <li class="filter-color__item">
-            <label>
-              <input class="filter-color__input" type="checkbox" name="gray" checked>
-              <span class="control-label">Серый</span>
-            </label>
-          </li>
-          <li class="filter-color__item">
-            <label>
-              <input class="filter-color__input" type="checkbox" name="tifany">
-              <span class="control-label">Тиффани</span>
-            </label>
-          </li>
-          <li class="filter-color__item">
-            <label>
-              <input class="filter-color__input" type="checkbox" name="black">
-              <span class="control-label">Черный</span>
-            </label>
-          </li>
-          <li class="filter-color__item">
-            <label>
-              <input class="filter-color__input" type="checkbox" name="pink">
-              <span class="control-label">Розовый</span>
-            </label>
-          </li>
-          <li class="filter-color__item">
-            <label>
-              <input class="filter-color__input" type="checkbox" name="ornge">
-              <span class="control-label">Оранжевый</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="main-form__cover-color">
+        <fieldset class="filter-color form-fieldset">
+          <h2 class="filter-color__legend form-legend">Цвет</h2>
+          <ul class="filter-color__list">
+            <li class="filter-color__item">
+              <label>
+                <input class="filter-color__input" type="checkbox" name="white" checked>
+                <span class="control-label">Белый</span>
+              </label>
+            </li>
+            <li class="filter-color__item">
+              <label>
+                <input class="filter-color__input" type="checkbox" name="gray" checked>
+                <span class="control-label">Серый</span>
+              </label>
+            </li>
+            <li class="filter-color__item">
+              <label>
+                <input class="filter-color__input" type="checkbox" name="tifany">
+                <span class="control-label">Тиффани</span>
+              </label>
+            </li>
+            <li class="filter-color__item">
+              <label>
+                <input class="filter-color__input" type="checkbox" name="black">
+                <span class="control-label">Черный</span>
+              </label>
+            </li>
+            <li class="filter-color__item">
+              <label>
+                <input class="filter-color__input" type="checkbox" name="pink">
+                <span class="control-label">Розовый</span>
+              </label>
+            </li>
+            <li class="filter-color__item">
+              <label>
+                <input class="filter-color__input" type="checkbox" name="ornge">
+                <span class="control-label">Оранжевый</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
       <!-- ФИО -->
       <fieldset class="user-data form-fieldset">
-        <div class="user-data__legend-cover">
-          <legend class="user-data__legend form-legend">ФИО</legend>
-        </div>
+        <h2 class="user-data__legend form-legend">ФИО</h2>
         <div class="user-name">
           <label for="user-name" class="user-name__label">Имя:</label>
           <input class="user-name__input" type="text" id="user-name" name="user-name" placeholder="Введите ваше имя*"
@@ -157,25 +153,21 @@
             placeholder="Отчество, если желаете">
         </div>
       </fieldset>
-      <!-- телефон -->
-      <fieldset class="user-tell form-fieldset">
-        <div class="user-tell__legend-cover">
-          <legend class="user-tell__legend form-legend">Тел</legend>
-        </div>
-        <input class="user-tell__input" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-      </fieldset>
-      <!-- почта -->
-      <fieldset class="user-mail form-fieldset">
-        <div class="user-mail__legend-cover">
-          <legend class="user-mail__legend form-legend">E-mail</legend>
-        </div>
-        <input class="user-mail__input" type="email" name="email" placeholder="Ваш Email*" required>
-      </fieldset>
+      <div class="main-form__cover-color">
+        <!-- телефон -->
+        <fieldset class="user-tell form-fieldset">
+          <h2 class="user-tell__legend form-legend">Тел</h2>
+          <input class="user-tell__input" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+        </fieldset>
+        <!-- почта -->
+        <fieldset class="user-mail form-fieldset">
+          <h2 class="user-mail__legend form-legend">E-mail</h2>
+          <input class="user-mail__input" type="email" name="email" placeholder="Ваш Email*" required>
+        </fieldset>
+      </div>
       <!-- Доп -->
       <fieldset class="other-info form-fieldset">
-        <div class="other-info__legend-cover">
-          <legend class="other-info__legend form-legend">Доп</legend>
-        </div>
+        <h2 class="other-info__legend form-legend">Доп</h2>
         <textarea class="other-info__textarea" name="other-info" id="other-info"
           rows="6">Опишите все ваши пожелания к заказу</textarea>
       </fieldset>
@@ -189,7 +181,7 @@
     <!-- Блок 5 социальные сети -->
     <div class="main-footer__cover">
       <h2 class="visually-hidden">Подвал</h2>
-      <a class="main-footer__logo">
+      <a class="main-footer__logo" href="index.html">
         <img src="img/mishka-logo-footer.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
       </a>
       <div class="social">
@@ -227,7 +219,6 @@
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
-        <h2 class="copyright__text">Разработано:</h2>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
