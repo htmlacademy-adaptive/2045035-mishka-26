@@ -27,7 +27,25 @@
   font-display: swap;
 }
 
+// Адаптивные размеры
+
+@mobile-width: 320px;
+@tablet-width: 768px;
+@desktop-width: 1050px;
+@mobile-width-only: 767px;
+
 // Общие стили и переменные
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -35,6 +53,21 @@ body {
   line-height: 24px;
   color: #444444;
   height: 100%;
+}
+
+.main {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+  }
 }
 
 // заголовки
@@ -50,6 +83,24 @@ body {
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title-table {
+  font-weight: 700;
+  font-size: 43px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title-desctop {
+  font-weight: 700;
+  font-size: 53px;
+  line-height: 57px;
   color: #000000;
   margin: 0;
   padding: 0;

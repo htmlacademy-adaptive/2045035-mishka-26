@@ -22,6 +22,67 @@
   text-align: center;
 }
 
+.week-product__image {
+  width: 260px;
+}
+
+// Адаптация
+
 .week-product {
-  margin-bottom: 73px;
+  width: @mobile-width;
+  margin: 0 auto;
+  margin-bottom: 36px;
+  padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: 292px 334px;
+    column-gap: 42px;
+    margin-bottom: 52px;
+
+    .week-product__image {
+      grid-column: 2/3;
+      grid-row: 2/5;
+      width: 334px;
+    }
+
+    .week-product__name {
+      width: 450px;
+      .section-title-table;
+    }
+
+    .week-product__title {
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 117px 292px 525px;
+    column-gap: 58px;
+    margin-bottom: 73px;
+
+    .week-product__title {
+      order: -1;
+      grid-row: 1/5;
+    }
+
+    .week-product__image {
+      grid-column: 3/4;
+      grid-row: 1/5;
+      width: 525px;
+    }
+
+    .week-product__name {
+      width: 550px;
+      .section-title-desctop;
+      z-index: 1;
+    }
+  }
 }

@@ -1,5 +1,75 @@
 .main-title {
   .page-title;
+
+  @media (min-width: @tablet-width) {
+    .section-title-table;
+  }
+
+  @media (min-width: @desktop-width) {
+    .section-title-desctop;
+  }
+}
+
+.main-catalog__title-cover {
+  background-color: #f1f1f1;
+  padding: 73px 0;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+}
+
+.products {
+  max-width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 668px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+.products__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 51px;
+  }
+}
+
+.products__item {
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.products__image {
+  @media (min-width: @tablet-width) {
+    grid-row: 1/4;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .products__title {
@@ -26,6 +96,27 @@
   color: #000000;
 }
 
+.process-video {
+  max-width: 260px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    max-width: 668px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 272px;
+    gap: 79px;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+}
+
 .process-video__title {
   .products__title;
   background-image: url("../img/icon/icon-video.svg");
@@ -40,8 +131,28 @@
   margin: 0;
 }
 
+.process-video__image {
+  max-width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 668px;
+    margin: 0 auto;
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 100%;
+    grid-row: 1/4;
+  }
+}
+
 .process-video__button--play {
+  position: absolute;
+  top: 20%;
+  left: 40%;
   background-image: url("../img/icon/button-play.svg");
+  background-size: 100px 76px;
   width: 101px;
   height: 77px;
 }
