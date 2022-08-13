@@ -12,14 +12,11 @@
   <header>
     <nav class="main-nav">
       <div class="main-nav__cover-logo">
-        <a class="main-nav__logo--mobile" href="index.html">
-          <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
+        <a class="main-nav__logo" href="index.html">
+          <img src="img/mishka-logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы «Мишка».">
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
-      <a class="main-nav__logo--tablet" href="index.html">
-        <img src="img/mishka-logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы «Мишка».">
-      </a>
       <!-- Раскрывающаяся навигация -->
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
@@ -33,9 +30,6 @@
           </a>
         </li>
       </ul>
-      <a class="main-nav__logo--desktop" href="index.html">
-        <img src="img/mishka-logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы «Мишка».">
-      </a>
       <ul class="main-nav__list user-list">
         <li class="user-list__item">
           <a class="user-list__link" href="#">
@@ -74,7 +68,7 @@
     <form class="main-form__filter" action="https://echo.htmlacademy.ru/" method="get">
       <!-- Тип -->
       <fieldset class="filter-type form-fieldset">
-        <h2 class="filter-type__legend form-legend">Тип</h2>
+        <legend class="filter-type__legend form-legend">Тип</legend>
         <ul class="filter-type__list">
           <li class="filter-type__item">
             <label>
@@ -93,7 +87,7 @@
       <!-- Цвет -->
       <div class="main-form__cover-color">
         <fieldset class="filter-color form-fieldset">
-          <h2 class="filter-color__legend form-legend">Цвет</h2>
+          <legend class="filter-color__legend form-legend">Цвет</legend>
           <ul class="filter-color__list">
             <li class="filter-color__item">
               <label>
@@ -136,7 +130,7 @@
       </div>
       <!-- ФИО -->
       <fieldset class="user-data form-fieldset">
-        <h2 class="user-data__legend form-legend">ФИО</h2>
+        <legend class="user-data__legend form-legend">ФИО</legend>
         <div class="user-name">
           <label for="user-name" class="user-name__label">Имя:</label>
           <input class="user-name__input" type="text" id="user-name" name="user-name" placeholder="Введите ваше имя*"
@@ -156,18 +150,18 @@
       <div class="main-form__cover-color">
         <!-- телефон -->
         <fieldset class="user-tell form-fieldset">
-          <h2 class="user-tell__legend form-legend">Тел</h2>
+          <legend class="user-tell__legend form-legend">Тел</legend>
           <input class="user-tell__input" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
         </fieldset>
         <!-- почта -->
         <fieldset class="user-mail form-fieldset">
-          <h2 class="user-mail__legend form-legend">E-mail</h2>
+          <legend class="user-mail__legend form-legend">E-mail</legend>
           <input class="user-mail__input" type="email" name="email" placeholder="Ваш Email*" required>
         </fieldset>
       </div>
       <!-- Доп -->
       <fieldset class="other-info form-fieldset">
-        <h2 class="other-info__legend form-legend">Доп</h2>
+        <legend class="other-info__legend form-legend">Доп</legend>
         <textarea class="other-info__textarea" name="other-info" id="other-info"
           rows="6">Опишите все ваши пожелания к заказу</textarea>
       </fieldset>

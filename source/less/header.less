@@ -1,3 +1,23 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 668px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .navigathion-link {
   font-weight: 700;
   font-size: 17px;
@@ -20,106 +40,61 @@
   .navigathion-link;
 }
 
-// страница
-
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    width: 668px;
-    margin: 0 auto;
-    padding: 0 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1050px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// логотипы
-
 .main-nav__cover-logo {
-  display: flex;
-  justify-content: space-between;
-
   @media (min-width: @tablet-width) {
-    display: none;
+    order: -2;
   }
-}
-
-.main-nav__logo--tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    display: flex;
-  }
-}
-
-.main-nav__logo--desktop {
-  display: none;
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    order: -1;
   }
 }
 
-// списки
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
 
 .site-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    order: 3;
-  }
-
   @media (min-width: @desktop-width) {
-    order: 0;
+    order: -2;
+  }
+}
+
+.user-list {
+  @media (min-width: @tablet-width) {
+    order: -1;
   }
 }
 
 .promo-list {
   display: none;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 
   @media (min-width: @desktop-width) {
-    display: flex;
-  }
-}
-
-.user-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  @media (min-width: @tablet-width) {
     display: flex;
   }
 }
 
 .main-nav__text {
   display: none;
-  padding: 0;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    order: 4;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-column: 3 / 4;
+    grid-column: 3/4;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
