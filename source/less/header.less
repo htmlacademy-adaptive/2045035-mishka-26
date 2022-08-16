@@ -4,20 +4,6 @@
   flex-direction: column;
   width: 320px;
   margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    width: 668px;
-    padding: 0 50px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1050px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 // логотип и тогел
@@ -27,14 +13,6 @@
   position: relative;
   min-height: 79px;
   background-color: #ffffff;
-
-  @media (min-width: @tablet-width) {
-    order: -2;
-  }
-
-  @media (min-width: @desktop-width) {
-    order: -1;
-  }
 }
 
 .main-nav__logo {
@@ -93,9 +71,17 @@
     display: none;
   }
 
-  .main-nav--opened .main-nav__wrapper {
+  .main-nav--opened .site-list {
     position: absolute;
     top: 79px;
+    z-index: 10;
+    background-color: #ffffff;
+    width: 320px;
+  }
+
+  .main-nav--opened .user-list {
+    position: absolute;
+    top: 237px;
     z-index: 10;
     background-color: #ffffff;
     width: 320px;
@@ -105,7 +91,11 @@
     display: none;
   }
 
-  .main-nav--nojs .main-nav__wrapper {
+  .main-nav--nojs .site-list {
+    position: static;
+  }
+
+  .main-nav--nojs .user-list {
     position: static;
   }
 
@@ -160,10 +150,6 @@
   color: #000000;
 }
 
-.promo-list__link {
-  .navigathion-link;
-}
-
 .site-list__link,
 .user-list__link {
   .navigathion-link;
@@ -172,7 +158,6 @@
   padding-left: 76px;
   padding-top: 28px;
   padding-bottom: 27px;
-  background-color: #ffffff;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
 
   &:hover {
@@ -198,41 +183,184 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-  }
-}
-
-.site-list {
-  @media (min-width: @desktop-width) {
-    order: -2;
-  }
-}
-
-.user-list {
-  @media (min-width: @tablet-width) {
-    order: -1;
-  }
-}
-
-.promo-list {
-  display: none;
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-  }
 }
 
 .main-nav__text {
   display: none;
   margin: 0;
+}
 
-  @media (min-width: @tablet-width) {
-    display: flex;
+// планшетная версия
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 668px;
+    padding: 0 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: -70px;
   }
 
+  .main-nav__cover-logo {
+    position: relative;
+    order: -2;
+  }
+
+  .main-nav__cover-logo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    width: 768px;
+    height: 1px;
+    background-color: #000000;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .main-nav__logo {
+    margin: 0;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .user-list__link {
+    box-shadow: none;
+  }
+
+  .user-list__item {
+    position: relative;
+  }
+
+  .user-list__item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: #000000;
+    opacity: 0.1;
+  }
+
+  .site-list__link {
+    box-shadow: none;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 21px 19px;
+    margin-left: -19px;
+  }
+
+  .site-list__item:not(:last-child) {
+    margin-right: 19px;
+  }
+
+  .user-list {
+    order: -1;
+  }
+
+  .user-list__text {
+    display: none;
+  }
+
+  .main-nav__text {
+    display: flex;
+    padding: 21px 0;
+    margin-left: auto;
+  }
+}
+
+// десктопная версия
+
+.promo-list {
+  display: none;
+  margin-top: 21px;
+
   @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: 1fr 150px 1fr;
+    margin-bottom: -65px;
+  }
+
+  .main-nav__cover-logo {
+    order: -1;
+  }
+
+  .main-nav__cover-logo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -500px;
+    width: 1150px;
+    height: 1px;
+    background-color: #000000;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .site-list {
+    order: -2;
+  }
+
+  .site-list__link {
+    font-size: 17px;
+    line-height: 24px;
+    padding: 32px 36px;
+    margin-left: -36px;
+  }
+
+  .site-list__item:not(:last-child) {
+    position: relative;
+    margin-right: 32px;
+  }
+
+  .site-list__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    width: 1px;
+    background-color: #000000;
+    opacity: 0.1;
+  }
+
+  .user-list {
+    margin-left: auto;
+  }
+
+  .promo-list__link {
+    .navigathion-link;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 20px 31px;
+    margin-left: -31px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .promo-list__item:not(:last-child) {
+    margin-right: 31px;
+  }
+
+  .main-nav__text {
     grid-column: 3/4;
   }
 }
