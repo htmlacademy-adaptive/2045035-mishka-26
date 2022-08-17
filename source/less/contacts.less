@@ -6,11 +6,15 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: 668px;
+    margin: 0 auto;
+    padding: 46px 50px 57px 50px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
+    margin: 0 auto;
+    padding: 71px 50px 105px 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 55px;
@@ -27,11 +31,13 @@
     background-image: url("../img/icon/flag.svg");
     background-repeat: no-repeat;
     background-position: right;
-    margin-bottom: 49px;
+    padding: 18px 0;
+    margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
     .section-title-desctop;
+    margin-top: 62px;
     margin-bottom: 35px;
     background-image: url("../img/icon/flag.svg");
     background-repeat: no-repeat;
@@ -46,6 +52,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 49px;
   }
 
   @media (min-width: @desktop-width) {
@@ -65,16 +72,25 @@
 
   @media (min-width: @tablet-width) {
     width: 768px;
+    margin-left: -50px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
     width: 527px;
+    height: 100%;
     grid-column: 2/3;
     grid-row: 1/4;
+    margin: 0;
   }
 }
 
 .contacts__button {
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    margin: 0 auto;
+  }
+
   @media (min-width: @desktop-width) {
     margin-left: 175px;
   }
@@ -91,18 +107,39 @@
   text-decoration: none;
 }
 
+.contacts-fonts-tablet {
+  .contacts-fonts;
+  font-size: 17px;
+  line-height: 30px;
+}
+
 .contacts-mail {
   display: flex;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 42px;
+  }
 }
 
 .contacts-mail__title {
   .contacts-fonts;
   width: 75px;
+
+  @media (min-width: @tablet-width) {
+    .contacts-fonts-tablet;
+  }
 }
 
 .contacts-mail__text {
   .contacts-fonts;
-  border-bottom: 1px solid #62d1ba;
+  text-decoration: underline;
+  text-decoration-color: #62d1ba;
+
+  @media (min-width: @tablet-width) {
+    .contacts-fonts-tablet;
+    text-decoration: underline;
+    text-decoration-color: #62d1ba;
+  }
 }
 
 .contacts-address {
@@ -112,8 +149,16 @@
 .contacts-address__title {
   .contacts-fonts;
   width: 75px;
+
+  @media (min-width: @tablet-width) {
+    .contacts-fonts-tablet;
+  }
 }
 
 .contacts-address__text {
   .contacts-fonts;
+
+  @media (min-width: @tablet-width) {
+    .contacts-fonts-tablet;
+  }
 }
