@@ -1,32 +1,57 @@
 .reviews {
-  width: 260px;
+  position: relative;
   margin: 0 auto;
   padding: 29px 30px 45px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 82px 0 47px 50px;
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 50px 0 50px;
+    margin-bottom: 67px;
+  }
+}
+
+.reviews__cover {
+  width: 260px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     display: grid;
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 350px 368px;
     grid-template-areas: "one two"
       "three four";
-    background-image: url("../img/review-background.jpg");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0 auto;
-    margin-bottom: 83px;
-    padding: 82px 0 47px 50px;
-    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
-    margin: 0 auto;
-    padding: 82px 0 47px 174px;
-    box-sizing: border-box;
-    margin-bottom: 60px;
+    grid-template-columns: 350px 525px;
+    grid-template-areas: "one two"
+      "three four";
+    padding: 78px 0 96px 174px;
+  }
+}
+
+.reviews::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    background-image: url("../img/review-background.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 50px;
+    width: 350px;
+    background-size: cover;
   }
 }
 
@@ -140,4 +165,28 @@
   line-height: 30px;
   text-decoration: none;
   color: #444444;
+}
+
+.reviews::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/zigzag-line-mobile.svg");
+  height: 6px;
+  width: 320px;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/zigzag-line-tablet.svg");
+    height: 17px;
+    width: 768px;
+    bottom: -83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/zigzag-line-desktop.svg");
+    height: 23px;
+    width: 1050px;
+    left: 50px;
+  }
 }
