@@ -4,6 +4,7 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+// import nunjucks from 'gulp-nunjucks';
 
 // Styles
 
@@ -17,6 +18,12 @@ export const styles = () => {
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
+
+// export const html = () => {
+//   gulp.src('source/*.html')
+//         .pipe(nunjucks.compile())
+//         .pipe(gulp.dest('dist'))
+// }
 
 // Server
 

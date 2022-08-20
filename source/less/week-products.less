@@ -1,5 +1,7 @@
 .week-product__name {
   .section-title;
+  margin: 0;
+  margin-bottom: 4px;
 }
 
 .week-product__title {
@@ -9,39 +11,69 @@
   text-transform: uppercase;
   color: #63d1bb;
   margin: 0;
+  margin-bottom: 17px;
   padding: 0;
+}
+
+.week-product__intro {
+  margin: 0;
+  margin-bottom: 28px;
 }
 
 .specifications {
   line-height: 20px;
 }
 
+.specifications-items {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.specifications-items::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  height: 1px;
+  background-color: #ececec;
+}
+
+.specifications__value {
+  width: 65px;
+}
+
 .week-product__price {
   font-size: 17px;
   line-height: 24px;
   text-align: center;
+  margin-bottom: 26px;
 }
 
 .week-product__image {
   width: 260px;
+  margin-bottom: 26px;
 }
 
 // Адаптация
 
 .week-product {
-  width: @mobile-width;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
   margin: 0 auto;
-  margin-bottom: 36px;
-  padding: 0 30px;
+  padding: 31px 30px 36px 30px;
 
   @media (min-width: @tablet-width) {
     width: 668px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 40px 50px 52px 50px;
     display: grid;
     grid-template-columns: 292px 334px;
     column-gap: 42px;
-    margin-bottom: 52px;
 
     .week-product__image {
       grid-column: 2/3;
@@ -52,23 +84,36 @@
     .week-product__name {
       width: 450px;
       .section-title-table;
+      margin-bottom: 37px;
     }
 
     .week-product__title {
+      text-align: center;
       margin-left: auto;
+      width: 100px;
+    }
+
+    .week-product__intro {
+      font-size: 17px;
+      line-height: 30px;
+      margin-bottom: 48px;
+    }
+
+    .week-product__specifications {
+      margin-bottom: 57px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
+    width: 1050px;
     margin: 0 auto;
-    padding: 0;
+    padding: 54px 50px 73px 50px;
     display: grid;
     grid-template-columns: 117px 292px 525px;
     column-gap: 58px;
-    margin-bottom: 73px;
 
     .week-product__title {
+      margin-top: 61px;
       order: -1;
       grid-row: 1/5;
     }
@@ -83,6 +128,35 @@
       width: 550px;
       .section-title-desctop;
       z-index: 1;
+      margin-top: 61px;
+      margin-bottom: 35px;
     }
+
+    .week-product__specifications {
+      margin-bottom: 109px;
+    }
+  }
+}
+
+.week-product::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/zigzag-line-mobile.svg");
+  height: 6px;
+  width: 320px;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/zigzag-line-tablet.svg");
+    height: 17px;
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/zigzag-line-desktop.svg");
+    height: 23px;
+    width: 1050px;
+    left: 50px;
   }
 }
