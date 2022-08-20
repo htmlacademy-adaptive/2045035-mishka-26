@@ -1,5 +1,5 @@
 .header-oters {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .main-nav {
@@ -20,6 +20,14 @@
 
 .main-nav__logo {
   margin-left: 80px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__toggle {
@@ -157,6 +165,11 @@
 
   &:hover {
     opacity: 0.6;
+
+    .user-list__icon {
+      fill: #63d1bb;
+      opacity: 1;
+    }
   }
 
   &:active {
@@ -170,7 +183,7 @@
   left: 30px;
   width: 21px;
   height: 21px;
-  opacity: 0.6;
+  opacity: 0.2;
   fill: #000000;
 }
 

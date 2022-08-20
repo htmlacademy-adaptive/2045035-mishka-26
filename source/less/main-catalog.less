@@ -12,7 +12,7 @@
 
 .main-catalog__title-cover {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: #f1f1f1;
   padding: 73px 0;
 }
@@ -21,7 +21,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     content: "";
-    background-image: url("../img/zigzag-fill-desktop.svg");
+    background-image: url("../img/pattern-tablet.svg");
     bottom: -5px;
     left: 0;
     width: 1000px;
@@ -29,7 +29,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/zigzag-fill-desktop-big.svg");
+    background-image: url("../img/pattern-desktop.svg");
     height: 34px;
     width: 1000%;
     left: 0;
@@ -218,7 +218,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 682px 368px;
     max-width: 1050px;
     margin: 0 auto;
     padding: 0 50px 105px 50px;
@@ -236,7 +237,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 367px;
     padding: 47px 57px 60px 80px;
   }
 }
