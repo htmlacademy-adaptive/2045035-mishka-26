@@ -27,6 +27,12 @@
   font-display: swap;
 }
 
+
+// * {
+//   outline: 1px solid #ff0000;
+// }
+
+
 // Адаптивные размеры
 
 @mobile-width: 320px;
@@ -35,6 +41,24 @@
 @mobile-width-only: 767px;
 
 // Общие стили и переменные
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
+  // overflow-x: hidden;
+}
+
 
 .visually-hidden {
   position: absolute;
@@ -45,30 +69,6 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 15px;
-  line-height: 24px;
-  color: #444444;
-  height: 100%;
-  margin: 0;
-}
-
-.main {
-  width: 320px;
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1150px;
-    margin: 0 auto;
-  }
 }
 
 // заголовки
