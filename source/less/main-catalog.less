@@ -154,6 +154,11 @@
 
 .products__image {
   display: block;
+}
+
+.products__image-wrapper {
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     grid-row: 1/4;
@@ -162,7 +167,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    height: 462px;
+    width: 316px;
   }
 }
 
@@ -236,6 +242,14 @@
   border: 1px solid #ececec;
   padding: 22px 34px 33px 34px;
 
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
   @media (min-width: @tablet-width) {
     padding: 42px 42px 46px 42px;
   }
@@ -303,6 +317,10 @@
 }
 
 .process-video__image {
+  display: block;
+}
+
+.process-video__image-wrapper {
   position: absolute;
   max-width: 260px;
   margin: 0 auto;

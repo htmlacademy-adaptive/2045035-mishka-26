@@ -77,27 +77,27 @@
 
   <main class="main">
     <div class="main__cover">
-      <h1 class="main__index-title">Милые штуки ручной<br>работы для дома</h1>
-      <section class="catalog-nav">
-        <h2 class="visually-hidden">
-          Разделы каталога
-        </h2>
-        <ul class="catalog-nav__list">
-          <li class="catalog-nav__item catalog-nav__item--furniture">
-            <a class="catalog-nav__link catalog-nav__link--furniture" href="#">
-              <p class="catalog-nav__title">Предметы <br>
-                интерьера </p>
-            </a>
-          </li>
-          <li class="catalog-nav__item catalog-nav__item--toys">
-            <a class="catalog-nav__link catalog-nav__link--toys" href="#">
-              <p class="catalog-nav__title">Детские <br>
-                игрушки</p>
-            </a>
-          </li>
-        </ul>
-      </section>
+      <h1 class="main__index-title">Милые штуки<br> ручной<br> работы для дома</h1>
     </div>
+    <section class="catalog-nav">
+      <h2 class="visually-hidden">
+        Разделы каталога
+      </h2>
+      <ul class="catalog-nav__list">
+        <li class="catalog-nav__item catalog-nav__item--furniture">
+          <a class="catalog-nav__link catalog-nav__link--furniture" href="#">
+            <p class="catalog-nav__title">Предметы <br>
+              интерьера </p>
+          </a>
+        </li>
+        <li class="catalog-nav__item catalog-nav__item--toys">
+          <a class="catalog-nav__link catalog-nav__link--toys" href="#">
+            <p class="catalog-nav__title">Детские <br>
+              игрушки</p>
+          </a>
+        </li>
+      </ul>
+    </section>
 
     <!-- Блок 2 товар недели -->
     <section class="week-product">
@@ -135,7 +135,18 @@
           </div>
         </dl>
       </div>
-      <img class="week-product__image" src="img/week-product.jpg" alt="Три милые вязяные карзинки разного размера.">
+      <p class="week-product__image-wrapper">
+        <picture>
+          <source media="(min-width: 1150px)"
+            srcset="./img/jpg/triple-set-desktop.jpg 1x, ./img/jpg/triple-set-desktop@2x.jpg 2x" width="525"
+            height="636">
+          <source media="(min-width: 768px)"
+            srcset="./img/jpg/triple-set-tablet.jpg 1x, ./img/jpg/triple-set-tablet@2x.jpg 2x" width="334" height="404">
+          <img class="week-product__image"
+            srcset="./img/jpg/triple-set-mobile.jpg 1x, ./img/jpg/triple-set-mobile@2x.jpg 2x" width="260" height="315"
+            alt="Три милые вязяные карзинки разного размера.">
+        </picture>
+      </p>
       <b class="week-product__price">Цена: 990 руб.</b>
       <button class="week-product__button button" type="button">Заказать</button>
     </section>

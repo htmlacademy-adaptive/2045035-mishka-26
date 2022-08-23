@@ -42,7 +42,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     content: "";
-    background-image: url("../img/review-background.jpg");
+    background-image: url("../img/jpg/review.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;
@@ -50,6 +50,10 @@
     left: 0;
     top: 0;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/review@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
