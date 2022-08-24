@@ -3,22 +3,34 @@
 
 .main__cover {
   position: relative;
-  background-image: url("../img/background-home.jpg");
-  background-size: auto 373px;
+  background-image: url("../img/jpg/header-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top;
   height: 373px;
-  padding-bottom: 133px;
+  width: 320px;
+  background-size: 100% auto;
+  margin: 0 auto;
+  margin-bottom: -70px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/header-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
+    background-image: url("../img/jpg/header-desktop.jpg");
     height: 758px;
-    background-size: auto 758px;
-    padding-bottom: 0;
+    width: 768px;
+    background-size: auto 100%;
+    background-position: 50% -80px;
+    margin-bottom: -200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/header-desktop@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
-    height: 763px;
-    background-size: auto 763px;
+    background-size: auto 100%;
     width: 1150px;
   }
 }
@@ -34,26 +46,36 @@
   padding-top: 73px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 155px;
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 80px;
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 157px;
+    width: 700px;
+    margin: 0 auto;
     font-size: 53px;
     line-height: 57px;
   }
 }
 
-// Разделы каталога
-
-.catalog-nav {
-  position: absolute;
-  bottom: 0;
+.main__index-title br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
-.catalog-nav::after {
+// Разделы каталога
+
+// .catalog-nav {
+//   position: absolute;
+//   bottom: 0;
+
+// }
+
+.catalog-nav__list::after {
   @media (min-width: @tablet-width) {
     position: absolute;
     content: "";
@@ -62,7 +84,7 @@
     width: 768px;
     height: 24px;
     bottom: -5px;
-    right: 0;
+    left: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -82,11 +104,13 @@
   display: flex;
   flex-direction: column;
   list-style: none;
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
+    width: 668px;
     padding: 0 50px;
     flex-direction: row;
     align-items: flex-end;
@@ -110,6 +134,7 @@
 
   @media (min-width: @tablet-width) {
     width: 334px;
+    padding: 25px 0 34px 31px;
   }
 
   @media (min-width: @desktop-width) {
@@ -126,6 +151,11 @@
   margin: 0;
   padding: 0;
   width: 200px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 400px;

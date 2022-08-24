@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml"> <!-- свг -->
+  <link rel="apple-touch-icon" href="./img/favicon/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body>
@@ -82,7 +86,16 @@
       <h2 class="visually-hidden">Товары</h2>
       <ul class="products__list">
         <li class="products__item">
-          <img class="products__image" src="img/catalog-img-1.jpg" width="260" height="195" alt="#">
+          <p class="products__image-wrapper">
+            <picture>
+              <source media="(min-width: 1150px)"
+                srcset="./img/jpg/photo-1-desktop.jpg 1x, ./img/jpg/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/jpg/photo-1-tablet.jpg 1x, ./img/jpg/photo-1-tablet@2x.jpg 2x">
+              <img class="products__image" src="./img/jpg/photo-1-mobile.jpg" srcset="./img/jpg/photo-1-mobile.jpg 1x, ./img/jpg/photo-1-mobile@2x.jpg 2x" width="260" height="195"
+                alt="">
+            </picture>
+          </p>
           <div class="products__text-cover">
             <a class="products__title" href="#">Зайчик-попрыгайчик</a>
             <p class="products__intro">Рост 30 см, вес 200 г</p>
@@ -99,7 +112,16 @@
           </div>
         </li>
         <li class="products__item">
-          <img class="products__image" src="img/catalog-img-2.jpg" width="260" height="195" alt="#">
+          <p class="products__image-wrapper">
+            <picture>
+              <source media="(min-width: 1150px)"
+                srcset="./img/jpg/photo-2-desktop.jpg 1x, ./img/jpg/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/jpg/photo-2-tablet.jpg 1x, ./img/jpg/photo-2-tablet@2x.jpg 2x">
+              <img class="products__image" src="./img/jpg/photo-2-mobile.jpg" srcset="./img/jpg/photo-2-mobile.jpg 1x, ./img/jpg/photo-2-mobile@2x.jpg 2x" width="260" height="195"
+                alt="">
+            </picture>
+          </p>
           <div class="products__text-cover">
             <a class="products__title" href="#">Корзинка для белья</a>
             <p class="products__intro">Диаметр 15 см, высота 10 см</p>
@@ -116,7 +138,16 @@
           </div>
         </li>
         <li class="products__item">
-          <img class="products__image" src="img/catalog-img-3.jpg" width="260" height="195" alt="#">
+          <p class="products__image-wrapper">
+            <picture>
+              <source media="(min-width: 1150px)"
+                srcset="./img/jpg/photo-3-desktop.jpg 1x, ./img/jpg/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="./img/jpg/photo-3-tablet.jpg 1x, ./img/jpg/photo-3-tablet@2x.jpg 2x">
+              <img class="products__image" src="./img/jpg/photo-3-mobile.jpg" srcset="./img/jpg/photo-3-mobile.jpg 1x, ./img/jpg/photo-3-mobile@2x.jpg 2x" width="260" height="195"
+                alt="">
+            </picture>
+          </p>
           <div class="products__text-cover">
             <a class="products__title" href="#">Большая корзинка для игрушек</a>
             <p class="products__intro">Диаметр 30 см, высота 30 см</p>
@@ -136,7 +167,16 @@
     </section>
     <!-- Видео -->
     <section class="process-video">
-      <img class="process-video__image" src="img/catalog-video.jpg" alt="#">
+      <p class="process-video__image-wrapper">
+        <picture>
+          <source media="(min-width: 1150px)"
+            srcset="./img/jpg/video-desktop.jpg 1x, ./img/jpg/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+            srcset="./img/jpg/video-tablet.jpg 1x, ./img/jpg/video-tablet@2x.jpg 2x">
+          <img class="process-video__image" src="./img/jpg/video-mobile.jpg" srcset="./img/jpg/video-mobile.jpg 1x, ./img/jpg/video-mobile@2x.jpg 2x" width="260" height="150"
+            alt="">
+        </picture>
+      </p>
       <div class="process-video__text-cover">
         <h2 class="process-video__title">Процесс производства</h2>
         <button class="process-video__button process-video__button--play" type="button"></button>
