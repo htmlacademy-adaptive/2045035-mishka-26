@@ -18,21 +18,31 @@
   background-color: #ffffff;
 }
 
-.main-nav__logo {
-  display: block;
+.main-nav__link {
   margin-left: 80px;
   margin-top: 22px;
 
   @media (min-width: @tablet-width) {
+    margin-left: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 5px;
+  }
+}
+
+.main-nav__logo {
+  display: block;
+
+
+  @media (min-width: @tablet-width) {
     width: 113px;
     height: 46px;
-    margin-left: 50px;
   }
 
   @media (min-width: @desktop-width) {
     width: 150px;
     height: 72px;
-    margin-top: 5px;
   }
 
   &:hover {
