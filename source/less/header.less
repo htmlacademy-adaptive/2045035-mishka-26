@@ -19,7 +19,21 @@
 }
 
 .main-nav__logo {
+  display: block;
   margin-left: 80px;
+  margin-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 113px;
+    height: 46px;
+    margin-left: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 150px;
+    height: 72px;
+    margin-top: 5px;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -28,6 +42,14 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.main-nav__1 {
+  display: none;
+}
+
+.main-nav__table {
+  display: none;
 }
 
 .main-nav__toggle {
