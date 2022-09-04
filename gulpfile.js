@@ -3,8 +3,11 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+import csso from 'postcss-csso';
+import rename from 'gulp-rename';
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
 import browser from 'browser-sync';
-// import nunjucks from 'gulp-nunjucks';
 
 // Styles
 
@@ -13,24 +16,75 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
-// export const html = () => {
-//   gulp.src('source/*.html')
-//         .pipe(nunjucks.compile())
-//         .pipe(gulp.dest('dist'))
-// }
+// HTML
+
+const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(gulp.dest('build'));
+}
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/script.js')
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+}
+
+// Images
+
+const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
+}
+
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(gulp.dest('build/img'))
+}
+
+// WebP
+
+const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+  .pipe(squoosh({
+  webp: {}
+  }))
+  .pipe(gulp.dest('build/img'))
+  }
+
+// SVG
+
+const svg = () =>
+gulp.src(['source/img/*.svg', '!source/img/sprite/*.svg'])
+.pipe(svgo())
+.pipe(gulp.dest('build/img'));
+
+const sprite = () => {
+return gulp.src('source/img/sprite/*.svg')
+.pipe(svgo())
+.pipe(svgstore({
+inlineSvg: true
+}))
+.pipe(rename('sprite.svg'))
+.pipe(gulp.dest('build/img'));
+}
 
 // Server
 
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -48,5 +102,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  html, scripts, copyImages, createWebp, svg, sprite, styles, server, watcher
 );
