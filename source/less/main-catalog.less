@@ -19,6 +19,14 @@
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 73px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 34px 0 80px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 38px 0 106px 0;
+  }
 }
 
 .main-catalog__title-cover::after {
@@ -43,22 +51,24 @@
 .products {
   max-width: 260px;
   margin: 0 auto;
-  padding: 38px 30px 39px 30px;
+  padding: 32px 30px 30px 30px;
 
   @media (min-width: @tablet-width) {
     max-width: 668px;
     margin: 0 auto;
-    padding: 67px 50px 53px 50px;
+    padding: 72px 50px 53px 50px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 1050px;
     margin: 0 auto;
-    padding: 67px 50px 53px 50px;
+    padding: 118px 50px 56px 50px;
   }
 }
 
 .products__text-cover {
+  display: flex;
+  flex-direction: column;
   padding: 27px;
   border: 1px solid #ececee;
 
@@ -71,10 +81,12 @@
   }
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
     flex-grow: 1;
-    padding: 27px 39px 25px 34px;
+    padding: 27px 39px 25px 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 39px 25px 28px;
   }
 }
 
@@ -104,6 +116,8 @@
   border: none;
   cursor: pointer;
   opacity: 0.2;
+  width: 20px;
+  height: 19px;
 
   &:hover {
     fill: #63d1bb;
@@ -199,6 +213,10 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .products__intro {
@@ -208,6 +226,10 @@
   padding: 0;
   margin: 0;
   margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 12px;
@@ -219,6 +241,10 @@
   font-size: 15px;
   line-height: 24px;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .process-video {
@@ -259,7 +285,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 42px 42px 46px 42px;
+    padding: 42px 42px 46px 38px;
   }
 
   @media (min-width: @desktop-width) {
@@ -282,6 +308,7 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 24px;
+    padding-left: 66px;
   }
 
   @media (min-width: @desktop-width) {
@@ -316,11 +343,16 @@
   line-height: 24px;
   padding: 0;
   margin: 0;
-  margin-bottom: 41px;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     font-size: 15px;
     line-height: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
   }
 }
 
@@ -377,21 +409,21 @@
 
   @media (min-width: @tablet-width) {
     top: 191px;
-    left: 340px;
+    left: 330px;
 
     &:hover {
       top: 180px;
-      left: 330px;
+      left: 320px;
     }
   }
 
   @media (min-width: @desktop-width) {
     top: 191px;
-    left: 325px;
+    left: 345px;
 
     &:hover {
-      top: 180px;
-      left: 316px;
+      top: 185px;
+      left: 332px;
     }
   }
 }

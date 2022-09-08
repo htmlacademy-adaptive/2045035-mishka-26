@@ -6,7 +6,7 @@
   @media (min-width: @tablet-width) {
     width: 668px;
     margin: 0 auto;
-    padding: 62px 50px 83px 50px;
+    padding: 56px 50px 83px 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,12 +52,13 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 57px;
+    grid-template-columns: 292px 334px;
+    gap: 42px;
+    row-gap: 54px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 310px 334px;
   }
 }
 
@@ -69,7 +70,7 @@
 
 .about-company__item:not(:last-child) {
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 32px;
+    margin-bottom: 26px;
   }
 }
 
@@ -78,8 +79,8 @@
   background-repeat: no-repeat;
   width: 55px;
   height: 40px;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 6px;
 }
 
 .about-company__item--flower::before {
