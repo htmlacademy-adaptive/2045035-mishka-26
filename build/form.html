@@ -10,6 +10,8 @@
   <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml"> <!-- свг -->
   <link rel="apple-touch-icon" href="./img/favicon/apple-icon-180x180.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/psans-narrow.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -197,7 +199,7 @@
       <!-- Доп -->
       <fieldset class="other-info form-fieldset">
         <legend class="other-info__legend form-legend">Доп</legend>
-        <textarea class="other-info__textarea" name="other-info" id="other-info" rows="8"
+        <textarea class="other-info__textarea" name="other-info" id="other-info" rows="9"
           placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </fieldset>
       <div class="main-form__button-cover">
@@ -212,7 +214,7 @@
     <div class="main-footer__cover">
       <h2 class="visually-hidden">Подвал</h2>
       <a class="main-footer__logo" href="index.html">
-        <img src="img/mishka-logo-footer.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
+        <img src="img/mishka-logo-footer.svg" width="102" height="34" alt="Магазин товаров ручной работы «Мишка».">
       </a>
       <div class="social">
         <ul class="social__list">
@@ -227,7 +229,7 @@
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Ютуб</span>
-              <svg width="28" height="22" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+              <svg width="28" height="22">
                 <use xlink:href="img/sprite.svg#icon-yt"></use>
               </svg>
             </a>
@@ -243,7 +245,7 @@
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
-        <h2 class="copyright__text">Разработано:</h2>
+        <h2 class="copyright__text">Разработано</h2>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__logo" src="img/htmlacademy-green.svg" width="27" height="34"
             alt="Логотип школы html академии.">

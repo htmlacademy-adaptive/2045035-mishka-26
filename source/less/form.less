@@ -32,7 +32,15 @@
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 73px 0;
-  margin-bottom: 29px;
+  margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    padding: 34px 0 80px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 0 110px 0;
+  }
 }
 
 .main-form__title-cover::after {
@@ -72,12 +80,13 @@
     line-height: 30px;
     width: 668px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 42px 50px 14px 50px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1050px;
+    width: 700px;
     margin: 0 auto;
+    padding: 86px 50px 14px 50px;
   }
 }
 
@@ -85,13 +94,13 @@
   position: relative;
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   border: none;
   padding: 0;
 
   @media (min-width: @tablet-width) {
     width: 500px;
-    padding: 50px 50px 50px 220px;
+    padding: 52px 50px 50px 218px;
     margin-bottom: 0;
   }
 
@@ -109,7 +118,7 @@
     height: 1px;
     left: 0;
     right: 0;
-    top: -32px;
+    top: -38px;
     z-index: -1;
   }
 }
@@ -120,16 +129,21 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #63d1bb;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   background-color: #ffffff;
   padding-right: 24px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
     left: 50px;
+    top: 68px;
     width: 160px;
     padding: 0;
     background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 60px;
   }
 }
 
@@ -149,19 +163,19 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    width: 500px;
-    padding: 0 50px 50px 220px;
+    width: 668px;
+    padding: 0 50px 50px 50px;
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 50px 50px 225px;
-    width: 873px;
+    padding: 0 226px 50px 225px;
+    width: 700px;
   }
 }
 
 .input-text {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
@@ -171,6 +185,10 @@
 
 input::placeholder {
   .input-text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .main-form__info {
@@ -184,6 +202,7 @@ input::placeholder {
   @media (min-width: @tablet-width) {
     order: 2;
     margin: auto 0;
+    font-size: 17px;
   }
 }
 
@@ -203,19 +222,23 @@ input::placeholder {
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 26px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 236px 236px 236px;
   }
 }
 
 // стилизация форм радио
 
 .filter-type__item:not(:last-child) {
-  margin-bottom: 11px;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .filter-type__control {
@@ -223,20 +246,33 @@ input::placeholder {
   display: flex;
   height: 46px;
   padding-left: 61px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 76px;
+  }
 }
 
 .filter-type__label {
   align-self: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .filter-type__control-mark {
   position: absolute;
   top: 0;
   left: 0;
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   border: 2px solid #444444;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 46px;
+    height: 46px;
+  }
 }
 
 .filter-type__input[type="radio"]:checked + .filter-type__control-mark::before {
@@ -244,10 +280,17 @@ input::placeholder {
   content: "";
   top: 12px;
   left: 12px;
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   background-color: #62d1ba;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 14px;
+    left: 14px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .filter-type__control:hover .filter-type__control-mark {
@@ -260,8 +303,12 @@ input::placeholder {
 
 // стилизация форм чекбокс
 
+.filter-color__legend {
+  margin-bottom: 26px;
+}
+
 .filter-color__item:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -273,19 +320,33 @@ input::placeholder {
   display: flex;
   height: 42px;
   padding-left: 61px;
+
+  @media (min-width: @tablet-width) {
+    height: 50px;
+    padding-left: 81px;
+  }
 }
 
 .control-label {
   margin: auto 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .filter-color__control-mark {
   position: absolute;
   top: 0;
   left: 0;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border: 2px solid #444444;
+
+  @media (min-width: @tablet-width) {
+    width: 46px;
+    height: 46px;
+  }
 }
 
 .filter-color__input[type="checkbox"]:checked + .filter-color__control-mark::before {
@@ -296,6 +357,14 @@ input::placeholder {
   left: 8px;
   width: 23px;
   height: 16px;
+  background-repeat: no-repeat;
+  background-size: 23px 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 32px;
+    height: 22px;
+    background-size: 32px 22px;
+  }
 }
 
 .filter-color__control:hover .filter-color__control-mark {
@@ -308,16 +377,52 @@ input::placeholder {
 
 // стилизация фио
 
+.user-data {
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+    padding-right: 226px;
+  }
+}
+
+.user-data__label {
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+    margin-top: 14px;
+    margin-right: 24px;
+  }
+}
+
 .user-data__cover {
   display: flex;
   flex-direction: column;
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 26px;
+  }
 }
 
 .user-data__input {
-  padding: 17px 0;
+  padding: 19px 0;
   border: none;
   box-shadow: inset 0 -2px 0 #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+    flex-grow: 1;
+    padding: 16px 0 14px 20px;
+  }
 
   &:hover,
   &:active {
@@ -328,22 +433,45 @@ input::placeholder {
 
 // стилизация контакты
 
+.user-tell::after {
+  @media (max-width: @mobile-width-only) {
+    top: -16px;
+  }
+}
+
+.user-tell__legend {
+  margin-bottom: 8px;
+}
+
 .user-tell {
   position: relative;
   display: flex;
   flex-direction: column;
   padding-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+    padding-right: 226px;
+  }
 }
 
 .user-tell__icon {
   position: absolute;
-  right: 0;
-  bottom: 17px;
+  right: 5px;
+  bottom: 27px;
   opacity: 0.3;
 
   @media (min-width: @tablet-width) {
-    right: 80px;
-    bottom: 29px;
+    right: 74px;
+    bottom: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 230px;
   }
 }
 
@@ -353,6 +481,10 @@ input::placeholder {
   border: none;
   box-shadow: inset 0 -2px 0 #000000;
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+  }
 
   &:hover,
   &:active {
@@ -366,11 +498,35 @@ input::placeholder {
   }
 }
 
+.user-mail__legend {
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+  }
+}
+
+.user-mail::after {
+  @media (max-width: @mobile-width-only) {
+    top: -12px;
+  }
+}
+
 .user-mail {
   position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 12px;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+    padding-right: 226px;
+  }
 }
 
 .user-mail__icon {
@@ -380,16 +536,24 @@ input::placeholder {
   opacity: 0.3;
 
   @media (min-width: @tablet-width) {
-    right: 80px;
+    right: 72px;
     bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 228px;
   }
 }
 
 .user-mail__input {
-  padding: 17px 0;
+  padding: 14px 0;
   border: none;
   box-shadow: inset 0 -2px 0 #000000;
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+  }
 
   &:hover,
   &:active {
@@ -405,6 +569,26 @@ input::placeholder {
 
 .other-info {
   display: flex;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+    padding-right: 226px;
+  }
+}
+
+.other-info::after {
+  @media (max-width: @mobile-width-only) {
+    top: -32px;
+  }
+}
+
+.other-info__legend {
+  margin-bottom: 22px;
 }
 
 .other-info textarea {
