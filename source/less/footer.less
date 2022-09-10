@@ -29,6 +29,14 @@
   @media (min-width: @tablet-width) {
     display: flex;
     margin: auto 0;
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -95,4 +103,13 @@
 
 .copyright__logo {
   display: block;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
