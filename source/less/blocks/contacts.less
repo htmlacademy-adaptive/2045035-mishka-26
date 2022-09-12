@@ -50,6 +50,8 @@
 
 .contacts__text-cover {
   margin-bottom: 62px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -63,28 +65,6 @@
     padding: 0;
     padding-left: 175px;
     margin-bottom: 52px;
-  }
-}
-
-.contacts iframe {
-  border: none;
-  display: block;
-  width: 320px;
-  margin-left: -30px;
-  margin-bottom: 31px;
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-    margin-left: -50px;
-    margin-bottom: 55px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 527px;
-    height: 100%;
-    grid-column: 2/3;
-    grid-row: 1/4;
-    margin: 0;
   }
 }
 
@@ -121,6 +101,7 @@
 
 .contacts-mail {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 32px;
 
   @media (min-width: @desktop-width) {
@@ -130,10 +111,13 @@
 
 .contacts-mail__title {
   .contacts-fonts;
-  width: 75px;
+  width: 70px;
+  margin-right: 5px;
+  word-break: break-all;
 
   @media (min-width: @tablet-width) {
     .contacts-fonts-tablet;
+    margin-right: 5px;
   }
 }
 
@@ -159,14 +143,18 @@
 
 .contacts-address {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contacts-address__title {
   .contacts-fonts;
-  width: 75px;
+  width: 70px;
+  margin-right: 5px;
+  word-break: break-all;
 
   @media (min-width: @tablet-width) {
     .contacts-fonts-tablet;
+    margin-right: 5px;
   }
 }
 
@@ -175,5 +163,49 @@
 
   @media (min-width: @tablet-width) {
     .contacts-fonts-tablet;
+  }
+}
+
+.contacts__map {
+  width: 320px;
+  height: 450px;
+  background-image: url("../../img/map-mobile.jpg");
+  margin-left: -30px;
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/map-tablet.jpg");
+    width: 768px;
+    height: 450px;
+    margin-bottom: 55px;
+    margin-left: -50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    background-image: url("../../img/map-desktop.jpg");
+    background-repeat: no-repeat;
+    width: 527px;
+    height: auto;
+    margin: 0;
+  }
+}
+
+.contacts iframe {
+  border: none;
+  display: block;
+  width: 320px;
+  margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 527px;
+    height: 100%;
+    margin: 0;
   }
 }
