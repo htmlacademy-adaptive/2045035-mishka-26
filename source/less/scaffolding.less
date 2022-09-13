@@ -1,0 +1,86 @@
+// Общие стили и переменные
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
+  overflow-x: hidden;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// заголовки
+
+.page-title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.section-title-table {
+  font-weight: 700;
+  font-size: 43px;
+  line-height: 50px;
+  color: #000000;
+}
+
+.section-title-desctop {
+  font-weight: 700;
+  font-size: 53px;
+  line-height: 57px;
+  color: #000000;
+}
+
+// кнопка
+
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #444444;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  height: 52px;
+  border: 2px solid #444444;
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 16px 0;
+
+  &:hover {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}

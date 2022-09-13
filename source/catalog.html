@@ -16,7 +16,7 @@
 
 <body>
   <header class="header-oters">
-    <nav class="main-nav main-nav--nojs">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <!-- что бы запустить меню класс "main-nav--closed"  для закрытого состояния и класс "main-nav--opened" для открытого -->
       <div class="main-nav__cover-logo">
         <a class="main-nav__link" href="index.html">
@@ -189,7 +189,9 @@
     <div class="main-footer__cover">
       <h2 class="visually-hidden">Подвал</h2>
       <a class="main-footer__logo" href="index.html">
-        <img src="img/mishka-logo-footer.svg" width="102" height="35" alt="Магазин товаров ручной работы «Мишка».">
+        <svg width="102" height="34" role="img" aria-label="Магазин товаров ручной работы «Мишка».">
+          <use xlink:href="img/sprite.svg#mishka-logo-footer"></use>
+        </svg>
       </a>
       <div class="social">
         <ul class="social__list">
@@ -204,7 +206,7 @@
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Ютуб</span>
-              <svg width="28" height="22" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+              <svg width="28" height="22">
                 <use xlink:href="img/sprite.svg#icon-yt"></use>
               </svg>
             </a>

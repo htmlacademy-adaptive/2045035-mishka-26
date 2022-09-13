@@ -18,22 +18,18 @@
 }
 
 .reviews__cover {
+  position: relative;
   width: 260px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 350px 368px;
-    grid-template-areas: "one two"
-      "three four";
-    padding: 82px 0 47px 50px;
+    width: 668px;
+    padding: 82px 50px 47px 50px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 350px 525px;
-    grid-template-areas: "one two"
-      "three four";
+    width: 875px;
     padding: 78px 0 96px 174px;
   }
 }
@@ -72,26 +68,27 @@
   @media (min-width: @tablet-width) {
     .section-title-table;
     margin-bottom: 38px;
+    width: 430px;
   }
 
   @media (min-width: @desktop-width) {
     .section-title-desctop;
     margin-bottom: 35px;
+    width: 600px;
   }
 }
 
 .reviews__button {
   @media (min-width: @tablet-width) {
-    grid-area: two;
-    margin-left: auto;
-    margin-right: 48px;
-    margin-top: -4px;
+    position: absolute;
+    top: 78px;
+    right: 50px;
     width: 175px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 0;
-    margin-top: 0;
+    right: 0;
+    top: 78px;
   }
 }
 
@@ -117,15 +114,14 @@
   margin-bottom: 38px;
 
   @media (min-width: @tablet-width) {
-    grid-area: four;
-    margin-top: auto;
-    margin-left: auto;
-    margin-bottom: 0;
-    margin-right: 36px;
+    position: absolute;
+    right: 52px;
+    bottom: 10px;
   }
 
   @media (min-width: @tablet-width) {
-    margin-right: -10px;
+    right: -10px;
+    bottom: 60px;
   }
 }
 
@@ -168,7 +164,7 @@
 }
 
 .reviews__next::after {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 
 .reviews__text {
@@ -180,7 +176,6 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
-    width: 700px;
     margin-bottom: 61px;
   }
 
@@ -195,6 +190,17 @@
   font-size: 17px;
   line-height: 24px;
   font-style: normal;
+  word-wrap: break-word;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    width: 430px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+    width: 600px;
+  }
 }
 
 .reviews__author-link {
@@ -202,6 +208,18 @@
   line-height: 30px;
   text-decoration: none;
   color: #444444;
+  word-wrap: break-word;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    max-width: 430px;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+    max-width: 600px;
+  }
 }
 
 .reviews::before {

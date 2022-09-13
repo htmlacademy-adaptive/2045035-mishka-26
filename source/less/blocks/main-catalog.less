@@ -172,26 +172,25 @@
 
   @media (min-width: @tablet-width) {
     grid-row: 1/4;
-    height: 334px;
-    width: 334px;
   }
 
-  @media (min-width: @desktop-width) {
-    height: 462px;
-    width: 316px;
-  }
+  // @media (min-width: @desktop-width) {
+  //   height: 462px;
+  //   width: 316px;
+  // }
 }
 
 .products__image {
   display: block;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    height: 334px;
+    height: 100%;
     width: 334px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 462px;
+    height: 100%;
     width: 316px;
   }
 }
@@ -372,6 +371,7 @@
 
 .process-video__image {
   display: block;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
     width: 668px;
@@ -380,6 +380,7 @@
 
   @media (min-width: @desktop-width) {
     width: 682px;
+    height: 100%;
   }
 }
 
