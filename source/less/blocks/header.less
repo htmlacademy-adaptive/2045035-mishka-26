@@ -202,12 +202,7 @@
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
 
   &:hover {
-    opacity: 0.6;
-
-    .user-list__icon {
-      fill: #63d1bb;
-      opacity: 1;
-    }
+    color: #666666;
   }
 
   &:active {
@@ -223,6 +218,11 @@
   height: 21px;
   opacity: 0.2;
   fill: #000000;
+}
+
+.user-list__link:hover .user-list__icon {
+  opacity: 1;
+  fill: #63d1bb;
 }
 
 .main-nav__list {
@@ -268,15 +268,15 @@
     grid-column: 2/3;
   }
 
-  .user-list::before {
+  .user-list--index::before {
     position: absolute;
     content: "";
     border-top: 1px solid #e6e6e6;
     background-color: #f9f9f9;
     height: 200px;
     bottom: -200px;
-    left: -370px;
-    width: 768px;
+    left: -800px;
+    width: 2000px;
     z-index: -1;
   }
 
@@ -308,7 +308,14 @@
   }
 
   .user-list__text {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 
   .site-list__link {
@@ -327,6 +334,13 @@
     padding-left: 82px;
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+
+  .user-list__link--search {
+    font-size: 0;
+    padding-left: 82px;
+    padding-top: 32px;
+    padding-bottom: 56px;
   }
 
   .user-list__item {
@@ -400,15 +414,27 @@
     justify-content: end;
   }
 
-  .user-list::before {
+  .user-list--index::before {
     position: absolute;
     content: "";
     border-top: 1px solid #e6e6e6;
     background-color: #f9f9f9;
     height: 200px;
     bottom: -200px;
-    left: -666px;
-    width: 1150px;
+    left: 0;
+    width: 1000%;
+    z-index: -1;
+  }
+
+  .user-list--index::after {
+    position: absolute;
+    content: "";
+    border-top: 1px solid #e6e6e6;
+    background-color: #f9f9f9;
+    height: 200px;
+    bottom: -200px;
+    right: 0;
+    width: 1000%;
     z-index: -1;
   }
 
